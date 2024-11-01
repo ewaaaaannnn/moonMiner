@@ -1,0 +1,9 @@
+.moon-size {
+  width: 50%;
+}
+
+
+.bg-img {
+  background-image: url(https://plus.unsplash.com/premium_photo-1663047540698-12e93c082dda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2UlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww);
+  background-size: cover;
+}
