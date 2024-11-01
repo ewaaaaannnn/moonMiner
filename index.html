@@ -28,7 +28,7 @@
         </div>
       </section>
     </div>
-    <div class="container-fluid">
+    <div class="container bg-warning border border-light">
       <section class="row justify-content-around">
         <div class="col-md-3 text-center d-flex justify-content-between">
           <h4 id="upgradesTotal"></h4>
@@ -37,14 +37,30 @@
         </div>
       </section>
       <section class="row justify-content-around">
-        <div class="col-md-5">
-          <button onclick="purchase('pickaxe')">Buy Pickaxe</button>
-          <button onclick="purchase('Laser Cutter')">Buy Laser Cutter</button>
-          <button onclick="purchaseAutoUpgrade('rover')">Rover</button>
-          <button onclick="purchaseAutoUpgrade('Space Station')">Space Station</button>
+        <div class="col-4">
+          <h4>Click Upgrades <span class="mdi mdi-mouse-left-click"></span></h4>
+          <button class="btn btn-primary" id="pickaxe" onclick="purchase('pickaxe')"></button>
+          <h5>Purchase Pickaxe</h5>
+          <button class="btn btn-danger" id="Laser Cutter" onclick="purchase('Laser Cutter')"></button>
+          <h5>Purchase Laser Cutter</h5>
         </div>
-        <div class="col-md-5">item stats</div>
-      </section>
+        <div class="col-4">
+          <h4>Auto Upgrades <span class="mdi mdi-cog"></span></h4>
+          <button class="btn btn-primary" id="rover" onclick="purchaseAutoUpgrade('rover')"></button>
+          <h5>Purchase Rover</h5>
+          <button class="btn btn-danger" id="Space Station" onclick="purchaseAutoUpgrade('Space Station')"></button>
+          <h5>Purchase Space Station</h5>
+        </div>
+        <div class="row text-center">
+          <h6 id="pickaxeQuantity"></h6>
+          <h6></h6>
+          <h6></h6>
+          <h6></h6>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
     </div>
   </main>
 </body>

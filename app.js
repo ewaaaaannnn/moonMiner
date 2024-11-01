@@ -103,7 +103,7 @@ function purchaseAutoUpgrade(itemName) {
 
 function drawCheese() {
   const cheeseElm = document.getElementById('cheeseTotal');
-  cheeseElm.innerHTML = cheese
+  cheeseElm.innerHTML = `${cheese.toFixed(0)} <span class="mdi mdi-diamond-stone"></span>`;
 }
 
 drawCheese()
@@ -111,16 +111,50 @@ drawCheese()
 
 function drawUpgrades() {
   const upgradesElm = document.getElementById('upgradesTotal');
-  upgradesElm.innerHTML = upgrades
+  upgradesElm.innerHTML = `${upgrades}+`
+  drawUpgradePrice()
 }
 
 drawUpgrades()
 
 function drawAutoUpgrades() {
   const autoUpgradesElm = document.getElementById('autoMine');
-  autoUpgradesElm.innerHTML = autoMine
+  autoUpgradesElm.innerHTML = `${autoMine}+`
+  drawAutoUpgradePrice()
 }
 
 drawAutoUpgrades()
+
+
+function drawAutoUpgradePrice() {
+  for (let i = 0; i < automaticUpgrades.length; i++) {
+    const autoUpgrade = automaticUpgrades[i];
+    const autoUpgradeElem = document.getElementById(autoUpgrade.name)
+    if (autoUpgradeElem) {
+      autoUpgradeElem.innerHTML = `${autoUpgrade.price.toFixed(0)} || ${autoUpgrade.quantity}`;
+    }
+  }
+}
+drawAutoUpgradePrice()
+
+
+function drawUpgradePrice() {
+  for (let i = 0; i < clickUpgrades.length; i++) {
+    const clickUpgrade = clickUpgrades[i];
+    const clickUpgradeElem = document.getElementById(clickUpgrade.name)
+    if (clickUpgradeElem) {
+      clickUpgradeElem.innerHTML = `${clickUpgrade.price.toFixed(0)} || ${clickUpgrade.quantity}`;
+    }
+  }
+}
+
+drawUpgradePrice()
+
+
+
+
+
+
+
 
 setInterval(automaticMine, 3000);
